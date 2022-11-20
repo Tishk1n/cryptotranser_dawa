@@ -6,6 +6,58 @@ import keyboards as kb
 from order import keyboardcrypt as kbcr
 from exchange import exchangecrypto as ex
 
+@dp.callback_query_handler(text=['rumonxmr2'])
+async def makeanechange(callback: types.CallbackQuery):
+    await callback.message.answer(f'Monero: {ex.monero}')
+    await callback.message.delete()
+
+@dp.callback_query_handler(text=['ruusdttrx2'])
+async def makeanechange(callback: types.CallbackQuery):
+    await callback.message.answer(f"USDT: {ex.usdt}")
+    await callback.message.delete()
+
+@dp.callback_query_handler(text=['ruatomcosmos2'])
+async def makeanechange(callback: types.CallbackQuery):
+    await callback.message.answer(f"ATOM: {ex.atom}")
+    await callback.message.delete()
+
+@dp.callback_query_handler(text=['rusolanasol2'])
+async def makeanechange(callback: types.CallbackQuery):
+    await callback.message.answer(f"SOLANA: {ex.solana}")
+    await callback.message.delete()
+
+@dp.callback_query_handler(text=['rucardanoada2'])
+async def makeanechange(callback: types.CallbackQuery):
+    await callback.message.answer(f"Cardanoada: {ex.cardano}")
+    await callback.message.delete()
+
+@dp.callback_query_handler(text=['rutrontrx2'])
+async def makeanechange(callback: types.CallbackQuery):
+    await callback.message.answer(f"TRON: {ex.tron}")
+    await callback.message.delete()
+
+@dp.callback_query_handler(text=['rudogecoindoge2'])
+async def makeanechange(callback: types.CallbackQuery):
+    await callback.message.answer(f"DOGECOIN: {ex.doge}")
+    await callback.message.delete()
+
+@dp.callback_query_handler(text=['ruavalancheavax2'])
+async def makeanechange(callback: types.CallbackQuery):
+    await callback.message.answer(f"AVALANCAEVA: {ex.avalanche}")
+    await callback.message.delete()
+
+@dp.callback_query_handler(text=['rubusdbnb2'])
+async def makeanechange(callback: types.CallbackQuery):
+    await callback.message.answer(f"BUSD: {ex.busd}")
+    await callback.message.delete()
+
+@dp.callback_query_handler(text=['ruusdteth2'])
+async def makeanechange(callback: types.CallbackQuery):
+    await callback.message.answer(f"USDT: {ex.usdt}")
+    await callback.message.delete()
+
+##################### ENGLISH VERSION
+
 @dp.callback_query_handler(text=['monxmr2'])
 async def makeanechange(callback: types.CallbackQuery):
     await callback.message.answer(f'Monero: {ex.monero}')
@@ -49,9 +101,4 @@ async def makeanechange(callback: types.CallbackQuery):
 @dp.callback_query_handler(text=['busdbnb2'])
 async def makeanechange(callback: types.CallbackQuery):
     await callback.message.answer(f"BUSD: {ex.busd}")
-    await callback.message.delete()
-
-@dp.callback_query_handler(text=['usdteth2'])
-async def makeanechange(callback: types.CallbackQuery):
-    await callback.message.answer(f"USDT: {ex.usdt}")
     await callback.message.delete()
